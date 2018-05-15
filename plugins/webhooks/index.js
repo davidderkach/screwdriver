@@ -73,7 +73,7 @@ function startPRJob(options, request) {
         scmUri: pipeline.scmUri
     };
 
-    eventFactory.scm.getPrInfo(scmConfig).then(prInfo => {
+    return eventFactory.scm.getPrInfo(scmConfig).then(prInfo => {
         console.log('-----------------------PR INFO--------------------');
         console.log(prInfo);
 
